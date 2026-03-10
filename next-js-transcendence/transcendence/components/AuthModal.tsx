@@ -18,8 +18,14 @@ export default function AuthModal({
 
                 <h2 className="text-2xl font-bold mb-4">{type}</h2>
                 <form className="flex flex-col gap-4">
-                    <input type="email" placeholder="Email" className="p-2 rounded border dark:bg-zinc-800"/>
+                    <input type="email" placeholder="Email Address" className="p-2 rounded border dark:bg-zinc-800"/>
+                    {type === 'Register' && (
+                        <input type="email" placeholder="Confirm Email Address" className="p-2 rounded border border-foreground/10 dark:bg-zinc-800"/>
+                    )}
                     <input type="password" placeholder="Password" className="p-2 rounded border dark:bg-zinc-800"/>
+                    {type === 'Register' && (
+                        <input type="password" placeholder="Confirm Password " className="p-2 rounded border border-foreground/10 dark:bg-zinc-800"/>
+                    )}
                     <button className="bg-foreground text-background py-2 rounded-lg font-bold">
                         {type === 'Login' ? 'Sign In' : 'Create Account'}
                     </button>
