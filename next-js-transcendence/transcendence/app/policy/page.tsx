@@ -17,7 +17,7 @@ export default function PrivacyPolicy() {
                 <h2 className="text-2xl font-semibold">4. Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact this 42 Wolfsburg transcendence project team.</p>
 
-                <h2 className="text-2xl font-semibold">4. Cat ownership</h2>
+                <h2 className="text-2xl font-semibold">5. Cat ownership</h2>
                 <p>If you have a cat you must send us a lot of pictures UwU.</p>
             </section>
         </div>

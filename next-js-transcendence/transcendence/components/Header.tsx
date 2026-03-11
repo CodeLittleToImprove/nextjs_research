@@ -21,7 +21,7 @@ export default function Header() {
                 </a>
             </div>
             <div className="flex justify-center">
-                <h1 className="font-bold">Ft_transcendence</h1>
+                <h1 className="font-black text-2xl tracking-tighter uppercase italic bg-gradient-to-r from-blue-600 to-indigo-400 bg-clip-text text-transparent">Ft_transcendence</h1>
             </div>
             <div className="flex justify-end pr-4">
                 <nav className="flex flex-col space-y-1">
