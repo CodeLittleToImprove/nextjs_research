@@ -43,6 +43,7 @@ export default function Header() {
                 isOpen={modalType !== null}
                 onClose={() => setModalType(null)}
                 type={modalType || 'Login'}
+                setType={(t) => setModalType(t)}
             />
         </header>
     );
