@@ -1,5 +1,7 @@
 "use client";
 
+import { useRouter } from "next/navigation"; //used for placeholder
+
 export default function AuthModal({
                                       isOpen,
                                       onClose,
@@ -11,8 +13,18 @@ export default function AuthModal({
     type: 'Login' | 'Register'
     setType: (type: 'Login' | 'Register') => void;
 }) {
+    const router = useRouter(); // for placeholder
+
     if (!isOpen) return null;
 
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        console.log("Redirecting to homepage...");
+
+        onClose();
+        router.push("/homepage"); // redirect to homepage
+    };
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
             <div
@@ -27,7 +39,8 @@ export default function AuthModal({
                         {type === 'Login' ? 'Welcome back, You little worm!' : 'Join the tactical mayhem.'}
                     </p>
                 </div>
-                <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}> {/* prevent refresh of the whole page*/}
+                {/*<form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}> /!* prevent refresh of the whole page*!/*/}
+                <form className="flex flex-col gap-4" onSubmit={handleSubmit}> {/* trigger placeholder */}
                     <input type="email" placeholder="Email Address"
                            className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"/>
 

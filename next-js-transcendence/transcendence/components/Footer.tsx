@@ -10,6 +10,12 @@ export default function Footer() {
                 <Link href="/terms" className="hover:text-foreground transition">
                     Terms of Service
                 </Link>
+                <Link href="/about" className="hover:text-foreground transition">
+                    Meet the Team
+                </Link>
+                <Link href="/userprofile" className="hover:text-foreground transition">
+                    User profile
+                </Link>
             </div>
             <p className="text-xs text-zinc-400">
                 © 2026 Ft_transcendence. Built at 42 Wolfsburg.
