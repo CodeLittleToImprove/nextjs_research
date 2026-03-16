@@ -2,10 +2,12 @@
 
 import {useState} from "react";
 
-export default function ProfilePage() {
-    const [activeTab, setActiveTab] = useState<'Info' | 'Friends' | 'Clan' | 'Invitations'>('Info');
+type TabType = 'Info' | 'Friends' | 'Clan' | 'Invitations';
 
-    const tabs = [
+export default function ProfilePage() {
+    const [activeTab, setActiveTab] = useState<TabType>('Info');
+
+    const tabs: { name: TabType; icon: string }[] = [
         {name: 'Info', icon: '👤'},
         {name: 'Friends', icon: '👥'},
         {name: 'Clan', icon: '🛡️'},
@@ -45,7 +47,7 @@ export default function ProfilePage() {
                     {tabs.map((tab) => (
                         <button
                             key={tab.name}
-                            onClick={() => setActiveTab(tab.name as any)}
+                            onClick={() => setActiveTab(tab.name)}
                             className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-bold transition-all ${
                                 activeTab === tab.name
                                     ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30 scale-105"
