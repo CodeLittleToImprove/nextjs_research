@@ -14,13 +14,13 @@ export default function ProfilePage() {
 
     return (
         <div className="max-w-4xl mx-auto py-12 px-6">
-            {/* Add this above your flex-row container */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
                 {[
                     {label: "Matches", value: "142", color: "text-blue-500"},
                     {label: "Win Rate", value: "64%", color: "text-green-500"},
                     {label: "K/D Ratio", value: "2.1", color: "text-red-500"},
-                    {label: "Rank", value: "Gold III", color: "text-yellow-500"},
+                    {label: "Kills", value: "500", color: "text-green-500"},
+                    {label: "Deaths", value: "42", color: "text-red-500"},
                 ].map((stat) => (
                     <div key={stat.label}
                          className="bg-zinc-100 dark:bg-zinc-900/50 p-4 rounded-2xl border border-foreground/5">
@@ -124,7 +124,6 @@ export default function ProfilePage() {
                         )}
                     </div>
                 </div>
-
             </div>
         </div>
     );
