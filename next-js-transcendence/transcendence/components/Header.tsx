@@ -49,10 +49,10 @@ export default function Header() {
                         )}
                     </div>
                 ) : (
-                    <nav className="flex flex-col space-y-1">
+                    <nav className="flex flex-col items-end space-y-1">
                         <button
                             onClick={() => setModalType('Login')}
-                            className="text-sm hover:text-blue-500 transition text-right"
+                            className="text-sm hover:text-blue-500 transition w-full text-center"
                         >
                             Login
                         </button>
