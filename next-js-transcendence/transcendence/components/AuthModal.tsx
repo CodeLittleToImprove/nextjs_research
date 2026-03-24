@@ -42,7 +42,7 @@ export default function AuthModal({
                 </div>
                 {/*<form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}> /!* prevent refresh of the whole page*!/*/}
                 <form className="flex flex-col gap-4" onSubmit={handleSubmit}> {/* trigger placeholder */}
-                    <input type="email" placeholder="Email Address"
+                    <input type="email" placeholder="Email Address" autoComplete="email"
                            className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"/>
 
                     {type === 'Register' && (
@@ -50,7 +50,7 @@ export default function AuthModal({
                                className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"/>
                     )}
 
-                    <input type="password" placeholder="Password"
+                    <input type="password" placeholder="Password" autoComplete="current-password"
                            className="p-3 rounded-xl border border-zinc-200 dark:border-zinc-800 dark:bg-zinc-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"/>
 
                     {type === 'Register' && (
